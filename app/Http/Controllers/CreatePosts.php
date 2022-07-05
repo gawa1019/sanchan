@@ -10,6 +10,7 @@ class CreatePosts extends Controller
         $title = $request->input('title');
         $detail = $request->input('detail');
         $user = $request->input('user');
+        $mail = $request->input('mail');
 
 
         ///DBに保存する処理
@@ -19,7 +20,8 @@ class CreatePosts extends Controller
             "posts" => [
                 "title" => $title,
                 "detail" => $detail,
-                "user" => $user
+                "user" => $user,
+                "mail" => $mail
             ],
         ]);
     }
